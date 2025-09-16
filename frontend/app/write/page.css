@@ -1,0 +1,181 @@
+/* Container */
+.write-container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: all 0.3s;
+}
+
+/* Poet input */
+.poet-input {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.poet-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  outline: none;
+}
+
+/* Mode buttons */
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.mode-buttons button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #6366f1;
+  background-color: #ffffff;
+  color: #6366f1;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.mode-buttons button.active,
+.mode-buttons button:hover {
+  background-color: #6366f1;
+  color: white;
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Form inputs */
+.write-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.write-form input[type="text"],
+.write-form input[type="file"] {
+  padding: 12px 18px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.write-form input[type="text"]:focus,
+.write-form input[type="file"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Submit button */
+.write-form button {
+  padding: 14px;
+  font-size: 16px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.write-form button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+.write-form button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Poem box */
+.write-poemBox {
+  margin-top: 35px;
+  padding: 25px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.write-poemBox h2 {
+  margin-bottom: 12px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.write-poemBox pre {
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  position: relative;
+  line-height: 1.6;
+  color: #111827;
+}
+
+.write-poemBox pre::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Image preview */
+.image-preview img {
+  margin-top: 15px;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.image-preview img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .write-container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .mode-buttons button {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .write-form button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .write-poemBox {
+    padding: 20px;
+  }
+}
